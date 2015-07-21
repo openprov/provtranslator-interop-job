@@ -2,7 +2,7 @@
 
 [ProvTranslator](https://provenance.ecs.soton.ac.uk/validator/view/translator.html) interoperability test job.
 
-[![Build Status](https://travis-ci.org/mikej888/provtoolsuite-provtranslator-interop-job.svg)](https://travis-ci.org/mikej888/provtoolsuite-provtranslator-interop-job)
+[![Build Status](https://travis-ci.org/prov-suite/provtranslator-interop-job.svg)](https://travis-ci.org/prov-suite/provtranslator-interop-job)
 
 The Travis CI test job:
 
