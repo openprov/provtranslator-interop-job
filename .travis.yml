@@ -33,7 +33,6 @@ before_install:
   - echo "Creating local configuration files..."
   - echo "PROV_TEST_CASES_DIR=$TRAVIS_BUILD_DIR/testcases" > config.properties
   - echo "PROV_LOCAL_CONFIG_DIR=$TRAVIS_BUILD_DIR/test-harness/localconfig" >> config.properties
-  - echo "PROVTOOLBOX_SCRIPTS_DIR=$PROVTOOLBOX_BIN" >> config.properties
   - echo "PROVPY_COMPARE_EXE=prov-compare" >> config.properties
   - echo "PROVPY_SCRIPTS_DIR/prov-compare,=" >> config.properties
   - cat config.properties
