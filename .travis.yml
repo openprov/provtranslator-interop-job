@@ -14,18 +14,14 @@ language: python
 python:
   - 2.7
 
-addons:
-  apt:
-    packages:
-    - zlib1g-dev
-    - libxslt1-dev
-
 before_install:
   - echo "Getting test cases..."
   - git clone https://github.com/prov-suite/testcases testcases
-  - echo "Getting ProvPy package for use as a comparator..."
-  - pip install prov
-  - prov-compare --version
+  - echo "Downloading and installing ProvToolbox 0.7.1 to use as the comparator..."
+  - wget https://repo1.maven.org/maven2/org/openprovenance/prov/toolbox/0.7.1/toolbox-0.7.1-release.zip
+  - unzip toolbox-0.7.1-release.zip
+  - export PATH=$PATH:$PWD/ProvToolbox/bin/
+  - provconvert -version
   - echo "Getting test harness..."
   - git clone https://github.com/prov-suite/interop-test-harness test-harness
   - cd test-harness
