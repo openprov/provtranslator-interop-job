@@ -32,4 +32,4 @@ before_install:
   - git clone https://github.com/prov-suite/testcases
 
 script: 
-  - nosetests prov_interop_provtranslator.interop_tests.test_provtranslator
+  - nosetests prov_interop_provtranslator.interop_tests.test_provtranslator > log.txt
