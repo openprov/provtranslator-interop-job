@@ -82,7 +82,7 @@ class ProvTranslatorTestCase(ConverterTestCase):
       ProvTranslatorTestCase.CONFIGURATION_KEY,
       ProvTranslatorTestCase.CONFIGURATION_FILE_ENV,
       config_file)
-    self.converter.configure(config)
+    super(ProvTranslatorTestCase, self).configure(config)
 
   def tearDown(self):
     super(ProvTranslatorTestCase, self).tearDown()
