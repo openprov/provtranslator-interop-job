@@ -31,6 +31,7 @@ before_install:
   - cd interop-test-harness
   - git checkout package
   - source scripts/install-prov-interop-comparator.sh
+  - pip install -r requirements.txt
   - python setup.py install
   - cd ..
   - echo "Getting test cases..."
@@ -38,7 +39,6 @@ before_install:
 
 install:
   - pip install -r requirements.txt
-  - python setup.py install
   
 script: 
   - nosetests $TEST_RUN
