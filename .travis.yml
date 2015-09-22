@@ -14,6 +14,11 @@ language: python
 python:
   - 2.7
 
+env:
+  matrix:
+    - TEST_RUN="-v prov_interop_provtranslator/tests"
+    - TEST_RUN="prov_interop_provtranslator/interop_tests > log.txt"
+
 addons:
   apt:
     packages:
@@ -31,5 +36,8 @@ before_install:
   - echo "Getting test cases..."
   - git clone https://github.com/prov-suite/testcases
 
+install:
+  - python setup.py install
+  
 script: 
-  - nosetests prov_interop_provtranslator.interop_tests.test_provtranslator > log.txt
+  - nosetests $TEST_RUN
