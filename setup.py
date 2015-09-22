@@ -8,8 +8,9 @@ except ImportError:
 
 requirements = [
     'prov_interop',
+    'cffi',
     'requests[security]',
-    'nose_parameterized',
+    'requests-mock',
 ]
 
 test_requirements = [
