@@ -37,6 +37,7 @@ before_install:
   - git clone https://github.com/prov-suite/testcases
 
 install:
+  - pip install -r requirements.txt
   - python setup.py install
   
 script: 
